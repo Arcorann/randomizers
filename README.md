@@ -23,27 +23,28 @@ The following randomisers were implemented when this was forked:
 
 The following randomisers have been implemented after the fork:
 * The following are instances of `bag`:
-** `bag8.py` implements an 8-piece bag, constructed as a 7-piece bag with a bonus piece randomly added before shuffling.
-** `bag10.py` implements a 10-piece bag, constructed as a 7-piece bag with three pieces from another 7-piece bag added before shuffling.
-** `bag28.py` implements a 28-piece bag (4 7-piece bags shuffled together).
-** `bag63.py` implements a 63-piece bag (9 7-piece bags shuffled together).
+    * `bag8.py` implements an 8-piece bag, constructed as a 7-piece bag with a bonus piece randomly added before shuffling.
+    * `bag28.py` implements a 28-piece bag (4 7-piece bags shuffled together).
+    * `bag63.py` implements a 63-piece bag (9 7-piece bags shuffled together).
 * `partialbag.py` implements a "partial bag" randomiser, where the bag is replaced when a certain number of pieces (less than the bag size) have been drawn.
 * `dtet.py` implements the DTET randomiser. In the future this will be reimplemented as an instance of a future "weight" randomiser (pending a name).
 
 The following randomisers are pending implementation:
+* The following instances of `bag` are pending implementation:
+    * `bag10.py` implements a 10-piece bag, constructed as a 7-piece bag with three pieces from another 7-piece bag added before shuffling.
 * `ccs.py` implements the randomiser from Tetris with Cardcaptor Sakura: Eternal Heart.
 * `historygeneric.py` implements a generic history randomiser. Note that the TGM series randomisers use their own PRNGs instead of Python's (Mersenne Twister) and hence are not instances of this. The following are instances of this randomiser:
-** `history3strict.py` implements a history of length 3 and strict exclusion (infinite rolls).
-** `history4roll2.py` implements a history of length 4 and rolls at most 2 times.
-** `history4roll4.py` implements a history of length 4 and rolls at most 4 times. This is equivalent to TGM's randomiser apart from the PRNG algorithm.
-** `history4roll6.py` implements a history of length 4 and rolls at most 6 times. This is equivalent to TGM2's randomiser apart from the PRNG algorithm.
-** `history4strict.py` implements a history of length 3 and strict exclusion (infinite rolls).
+    * `history3strict.py` implements a history of length 3 and strict exclusion (infinite rolls).
+    * `history4roll2.py` implements a history of length 4 and rolls at most 2 times.
+    * `history4roll4.py` implements a history of length 4 and rolls at most 4 times. This is equivalent to TGM's randomiser apart from the PRNG algorithm.
+    * `history4roll6.py` implements a history of length 4 and rolls at most 6 times. This is equivalent to TGM2's randomiser apart from the PRNG algorithm.
+    * `history4strict.py` implements a history of length 3 and strict exclusion (infinite rolls).
 * `refillbag.py` implements a "refill" bag randomiser, where the bag is refilled when a certain number of pieces (less than the bag size) have been drawn. Generally this refill comes from another bag. The following are instances of this randomiser:
-** `bag8refill7.py` implements an 8-piece bag that is refilled from a 7-piece bag when one piece remains.
-** `bag14refill7.py` implements a 14-piece bag that is refilled from a 7-piece bag when one piece remains.
+    * `bag8refill7.py` implements an 8-piece bag that is refilled from a 7-piece bag when one piece remains.
+    * `bag14refill7.py` implements a 14-piece bag that is refilled from a 7-piece bag when one piece remains.
 * The following instances of `partialbag` are pending implementation:
-** `bag5.py` implements a 5-piece bag drawn from a 7-piece bag.
-** `bag6.py` implements a 6-piece bag drawn from a 7-piece bag. This should simply call the defaults of `partialbag.py`.
-** `bag7from8.py` implements a 7-piece bag drawn from an 8-piece bag (initialised as in `bag8`).
-** `bag10from14.py` implements a 10-piece bag drawn from a 14-piece bag.
+    * `bag5.py` implements a 5-piece bag drawn from a 7-piece bag.
+    * `bag6.py` implements a 6-piece bag drawn from a 7-piece bag. This should simply call the defaults of `partialbag.py`.
+    * `bag7from8.py` implements a 7-piece bag drawn from an 8-piece bag (initialised as in `bag8`).
+    * `bag10from14.py` implements a 10-piece bag drawn from a 14-piece bag.
 * `speedblocks.py` implements SpeedBlocks' randomiser. This randomiser is a weighted randomiser that iteratively adjusts the weights after each piece (http://harddrop.com/forums/index.php?showtopic=7795&hl=randomizer&st=15)
